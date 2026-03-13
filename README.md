@@ -14,8 +14,8 @@ No API keys required. The host AI (GitHub Copilot, Claude, etc.) does all the re
 | Excel | `.xlsx`, `.xls` | ✅ | ✅ |
 | CSV / TSV | `.csv`, `.tsv` | ✅ | — |
 | JSON | `.json` | ✅ | — |
-| Word | `.docx` | ✅ | — |
-| PowerPoint | `.pptx` | ✅ | — |
+| Word | `.docx` | ✅ | ✅ |
+| PowerPoint | `.pptx` | ✅ | ✅ |
 | Plain text | `.txt`, `.md` | ✅ | — |
 | Images | `.png`, `.jpg`, `.jpeg`, `.gif`, `.bmp`, `.tiff`, `.webp` | — | ✅ |
 
