@@ -1,5 +1,5 @@
 """
-Documents MCP Server
+Docalyze MCP Server
 
 Provides Model Context Protocol tools to inspect and read local documents
 (PDF, Excel, CSV, JSON, TXT, Markdown). Designed to be launched via
@@ -66,7 +66,7 @@ ALLOWED_EXTENSIONS = {
 }
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".bmp", ".tif", ".tiff"}
 
-server = FastMCP("document-analyzer")
+server = FastMCP("docalyze")
 
 
 def _resolve_path(file_path: str) -> Path:

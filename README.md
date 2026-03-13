@@ -1,6 +1,6 @@
-<!-- mcp-name: io.github.LunarPerovskite/document-analyzer -->
+<!-- mcp-name: io.github.LunarPerovskite/docalyze -->
 
-# Document Analyzer MCP Server
+# Docalyze MCP Server
 
 An MCP (Model Context Protocol) server that lets AI assistants read and visually analyze local documents — PDFs, Excel spreadsheets, CSV files, Word documents, PowerPoint presentations, and images.
 
@@ -32,12 +32,12 @@ No API keys required. The host AI (GitHub Copilot, Claude, etc.) does all the re
 
 ### From VS Code (recommended)
 
-Search for **document-analyzer** in the MCP server gallery (Extensions sidebar → MCP tab) and click Install.
+Search for **docalyze** in the MCP server gallery (Extensions sidebar → MCP tab) and click Install.
 
 ### From PyPI
 
 ```bash
-pip install documents-mcp-server
+pip install docalyze-mcp-server
 ```
 
 ### Manual setup
@@ -47,10 +47,10 @@ Add to your VS Code `mcp.json` (or `settings.json`):
 ```jsonc
 {
   "servers": {
-    "document-analyzer": {
+    "docalyze": {
       "type": "stdio",
       "command": "python",
-      "args": ["-m", "documents_mcp_server"],
+      "args": ["-m", "docalyze_mcp_server"],
       "env": {
         "PYTHONIOENCODING": "utf-8"
       }
@@ -64,9 +64,9 @@ Or, if you installed via pip and want to use the entry point:
 ```jsonc
 {
   "servers": {
-    "document-analyzer": {
+    "docalyze": {
       "type": "stdio",
-      "command": "documents-mcp-server"
+      "command": "docalyze-mcp-server"
     }
   }
 }
@@ -78,16 +78,16 @@ The base install handles PDF, Excel, CSV, JSON, and plain text. For additional f
 
 ```bash
 # Word documents
-pip install documents-mcp-server[docx]
+pip install docalyze-mcp-server[docx]
 
 # PowerPoint
-pip install documents-mcp-server[pptx]
+pip install docalyze-mcp-server[pptx]
 
 # OCR (requires Tesseract installed on your system)
-pip install documents-mcp-server[ocr]
+pip install docalyze-mcp-server[ocr]
 
 # Everything
-pip install documents-mcp-server[all]
+pip install docalyze-mcp-server[all]
 ```
 
 ## Configuration
@@ -97,9 +97,9 @@ The server reads documents from a configurable root directory. Set the `DOCUMENT
 ```jsonc
 {
   "servers": {
-    "document-analyzer": {
+    "docalyze": {
       "type": "stdio",
-      "command": "documents-mcp-server",
+      "command": "docalyze-mcp-server",
       "env": {
         "DOCUMENTS_ROOT": "/path/to/your/documents"
       }
