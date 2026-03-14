@@ -1,7 +1,8 @@
 {
   "name": "docalyze-mcp-server",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "MCP server for reading and visually analyzing local documents (PDF, Excel, CSV, Word, PowerPoint, images). No API keys needed.",
+  "mcpName": "io.github.LunarPerovskite/docalyze",
   "license": "MIT",
   "author": "Juan Esteban Mosquera",
   "repository": {
