@@ -71,8 +71,11 @@ server = FastMCP("docalyze")
 
 def _resolve_path(file_path: str) -> Path:
     path = (DEFAULT_ROOT / file_path).resolve() if not Path(file_path).is_absolute() else Path(file_path).resolve()
-    if not str(path).startswith(str(DEFAULT_ROOT.resolve())):
-        raise ValueError("Access outside of root directory is not allowed")
+    # Security: Restrict access to root directory to prevent path traversal
+    # Set DOCALYZE_ALLOW_ALL_PATHS=true to bypass this restriction if needed for VS Code workspaces
+    allow_all = os.getenv("DOCALYZE_ALLOW_ALL_PATHS", "false").lower() == "true"
+    if not allow_all and not str(path).startswith(str(DEFAULT_ROOT.resolve())):
+        raise ValueError(f"Security constraint: Access outside of root directory {DEFAULT_ROOT.resolve()} is not allowed. To override, set DOCALYZE_ALLOW_ALL_PATHS=true.")
     if not path.exists():
         raise FileNotFoundError(f"File not found: {path}")
     if path.suffix.lower() not in ALLOWED_EXTENSIONS:

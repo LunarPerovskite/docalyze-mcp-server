@@ -1,4 +1,7 @@
 <!-- mcp-name: io.github.LunarPerovskite/docalyze -->
+<p align="center">
+  <img src="logo.svg" alt="Docalyze Logo" width="150" height="150">
+</p>
 
 # Docalyze MCP Server
 

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="100%" stop-color="#1E3A8A" />
+    </linearGradient>
+    <linearGradient id="docGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.3" flood-color="#000000" />
+    </filter>
+  </defs>
+  
+  <!-- Modern rounded background square -->
+  <rect width="200" height="200" rx="40" fill="url(#bgGrad)" />
+  
+  <!-- Main document shape with folded corner -->
+  <path d="M60 40 h50 l30 30 v90 a10 10 0 0 1 -10 10 H60 a10 10 0 0 1 -10 -10 V50 a10 10 0 0 1 10 -10 z" fill="url(#docGrad)" filter="url(#shadow)" />
+  <!-- Fold piece -->
+  <path d="M110 40 v30 h30 z" fill="#CBD5E1" />
+  
+  <!-- Text lines representing data/content -->
+  <rect x="70" y="80" width="60" height="8" rx="4" fill="#94A3B8" />
+  <rect x="70" y="100" width="40" height="8" rx="4" fill="#94A3B8" />
+  <rect x="70" y="120" width="50" height="8" rx="4" fill="#94A3B8" />
+  
+  <!-- Magnifying glass element representing analysis (Analytics/AI) -->
+  <circle cx="120" cy="120" r="28" fill="none" stroke="#F59E0B" stroke-width="10" filter="url(#shadow)" />
+  <!-- Magnifier handle -->
+  <line x1="139" y1="139" x2="162" y2="162" stroke="#F59E0B" stroke-width="14" stroke-linecap="round" filter="url(#shadow)" />
+  <!-- Inner glare of magnifier glass -->
+  <path d="M106 106 a20 20 0 0 1 15 -5" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="4" stroke-linecap="round" />
+</svg>
